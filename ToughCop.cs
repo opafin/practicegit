@@ -35,7 +35,6 @@ namespace GitTest
             {
                 int demerits = ((carSpeed - speedLimit) / excessSpeedPerDemerit);
 
-
                 if (demerits <= 0)
                     return $"The speed limit is {speedLimit} Son. You are good.";
 
