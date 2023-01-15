@@ -32,14 +32,11 @@ namespace GitTest
 
                 if (demerits <= 0)
                     return $"The speed limit is {speedLimit} Son. You are good.";
-
                 else if (demerits < 12)
                     return ($"The speed limit is {speedLimit} Son. {demerits} demerits");
                 else
                     return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Slap that lisence right into this hand, eh!.");
-
             }
-
         }
     }
 }
