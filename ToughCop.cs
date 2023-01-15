@@ -7,6 +7,7 @@ namespace GitTest
         For 12 or more demerit points, you lose your lisence.
         Did you go fast, or did you go slow? Sometimes it doesnt' really matter.
         The speed limit is randomly set by the local authorities.*/
+
         public static void SpeedCamera()
         {
             ToughCop copMiksu = new ToughCop();
