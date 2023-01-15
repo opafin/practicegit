@@ -1,4 +1,4 @@
-namespace GitTest
+namespace PracticeGit
 {
     class PracticeClass
     {
