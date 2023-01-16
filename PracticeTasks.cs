@@ -7,7 +7,7 @@ namespace PracticeNameSpace
             List<string> likers = new List<string>();
             while (true)
             {
-                Console.WriteLine("Enter the names of people who like your post!");
+                Console.WriteLine("Enter the names of the friends who like your post!");
                 var input = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(input))
                     break;
