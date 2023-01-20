@@ -33,7 +33,7 @@ namespace PracticeGit
                 else if (demerits < 12)
                     return ($"The speed limit is {speedLimit} Son. {demerits} demerits");
                 else
-                    return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Slap that lisence right into this hand, eh!.");
+                    return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Your lisence, this hand, eh!.");
             }
         }
     }
