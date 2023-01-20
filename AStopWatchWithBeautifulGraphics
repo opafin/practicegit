@@ -11,7 +11,7 @@ namespace PracticeGit
         private string beautifulGraphics = "----------------------------------------";
         public void SwitchOnStopWatch()
         {
-            Console.WriteLine("Welcome to the stopwatch!");
+            Console.WriteLine("Welcome to the stopwatch!"); 
             do
             {
                 Console.WriteLine("\n" + "Press Enter to Start and to Stop. Type N to exit");
