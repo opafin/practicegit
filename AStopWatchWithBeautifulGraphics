@@ -1,0 +1,53 @@
+namespace PracticeGit
+{
+    public class StopWatch
+    {
+        enum StopWatchState
+        {
+            Started,
+            Stopped,
+        }
+        private Enum? stateOfClock;
+        private string beautifulGraphics = "----------------------------------------";
+        public void SwitchOnStopWatch()
+        {
+            Console.WriteLine("Welcome to the stopwatch!");
+            do
+            {
+                Console.WriteLine("\n" + "Press Enter to Start and to Stop. Type N to exit");
+
+                switch (Console.ReadLine().ToUpper())
+                {
+                    case "":
+                        Console.WriteLine("\r" + beautifulGraphics);
+                        RunWatch();
+                        break;
+                    case "N":
+                        return;
+                }
+            }
+            while (stateOfClock is StopWatchState.Stopped);
+        }
+        void RunWatch()
+        {
+            stateOfClock = StopWatchState.Started;
+            DateTime startTime = DateTime.Now;
+            while (stateOfClock is StopWatchState.Started)
+            {
+                Console.Write("\r" + String.Concat(DateTime.Now - startTime));
+
+                if (Console.KeyAvailable)
+                {
+                    var key = Console.ReadKey();
+                    if (key.Key == ConsoleKey.Enter)
+                    {
+                        Console.Write("Your result is: " + (DateTime.Now - startTime) + "\n" + beautifulGraphics);
+                        stateOfClock = StopWatchState.Stopped;
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
+    
