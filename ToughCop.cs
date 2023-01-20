@@ -2,7 +2,7 @@ namespace PracticeGit
 {
     class PracticeClass
     {
-        /*Ouch! On your travels you were caught in a speed camera. 
+        /*Ouch! On your travels you were caught by a speed camera. 
         It's a demerit point for each 5km\h of speed over the speed limit.
         For 12 or more demerit points, you lose your lisence.
         Did you go fast, or did you go slow? Sometimes it doesnt' really matter.
@@ -12,8 +12,7 @@ namespace PracticeGit
         {
             ToughCop copBob = new ToughCop();
             Console.WriteLine("How fast did you drive?");
-            copBob.carSpeed = Convert.ToInt32(Console.ReadLine());
-            var theFinalJudgement = copBob.LayDownTheLaw();
+            var theFinalJudgement = copBob.LayDownTheLaw(Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine(theFinalJudgement);
         }
         public class ToughCop
@@ -24,11 +23,8 @@ namespace PracticeGit
                 speedLimit = random.Next(30, 120);
             }
             private int speedLimit;
-            public int carSpeed
-            { get; set; }
             const int excessSpeedPerDemerit = 5;
-
-            public string LayDownTheLaw()
+            public string LayDownTheLaw(int carSpeed)
             {
                 int demerits = ((carSpeed - speedLimit) / excessSpeedPerDemerit);
 
@@ -37,7 +33,7 @@ namespace PracticeGit
                 else if (demerits < 12)
                     return ($"The speed limit is {speedLimit} Son. {demerits} demerits");
                 else
-                    return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Your lisence, this hand, eh!.");
+                    return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Slap that lisence right into this hand, eh!.");
             }
         }
     }
