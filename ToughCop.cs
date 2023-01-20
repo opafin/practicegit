@@ -8,12 +8,13 @@ namespace PracticeGit
         Did you go fast, or did you go slow? Sometimes it doesnt' really matter.
         The speed limit is randomly set by the local authorities.*/
 
-        public static void SpeedCamera()
+        public static void caughtInASpeedCamera()
         {
             ToughCop copBob = new ToughCop();
             Console.WriteLine("How fast did you drive?");
             copBob.carSpeed = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(copBob.LayDownTheLaw());
+            var theFinalJudgement = copBob.LayDownTheLaw();
+            Console.WriteLine(theFinalJudgement);
         }
         public class ToughCop
         {
@@ -22,7 +23,7 @@ namespace PracticeGit
                 Random random = new Random();
                 speedLimit = random.Next(30, 120);
             }
-            public int speedLimit { get; }
+            private int speedLimit;
             public int carSpeed
             { get; set; }
             const int excessSpeedPerDemerit = 5;
@@ -31,12 +32,12 @@ namespace PracticeGit
             {
                 int demerits = ((carSpeed - speedLimit) / excessSpeedPerDemerit);
 
-                if (demeritCount <= 0)
+                if (demerits <= 0)
                     return $"The speed limit is {speedLimit} Son. You are good.";
-                else if (demeritCount < 12)
-                    return ($"The speed limit is {speedLimit} Son. {demeritCount} demerits");
+                else if (demerits < 12)
+                    return ($"The speed limit is {speedLimit} Son. {demerits} demerits");
                 else
-                    return ($"Son, the speed limit is {speedLimit}. That's {demeritCount} demerits. Slap that lisence right into this hand, eh!.");
+                    return ($"Son, the speed limit is {speedLimit}. That's {demerits} demerits. Your lisence, this hand, eh!.");
             }
         }
     }
