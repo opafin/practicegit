@@ -11,7 +11,9 @@ namespace PracticeGit
         {
             ToughCop copBob = new ToughCop();
             Console.WriteLine("How fast did you drive?");
-            var theFinalJudgement = copBob.LayDownTheLaw(Convert.ToInt32(Console.ReadLine()));
+            var fumblingWords = Console.ReadLine();
+            var factualCarSpeed = Convert.ToInt32(fumblingWords);
+            var theFinalJudgement = copBob.LayDownTheLaw(factualCarSpeed);
             Console.WriteLine(theFinalJudgement);
         }
         public class ToughCop
@@ -25,7 +27,7 @@ namespace PracticeGit
             const int excessSpeedPerDemerit = 5;
             public string LayDownTheLaw(int carSpeed)
             {
-                int demerits = ((carSpeed - speedLimit) / excessSpeedPerDemerit);
+                int demerits = ((factualCarSpeed - speedLimit) / excessSpeedPerDemerit);
 
                 if (demerits <= 0)
                     return $"The speed limit is {speedLimit} Son. You are good.";
