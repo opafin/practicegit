@@ -2,7 +2,7 @@ namespace PracticeGit
 {
     class PracticeClass
     {
-        /*Ouch! On your travels you were caught by a speed camera. 
+        /*Ouch! On your travels you were caught in a speed camera. 
         It's a demerit point for each 5km\h of speed over the speed limit.
         For 12 or more demerit points, you lose your lisence.
         Did you go fast, or did you go slow? Sometimes it doesnt' really matter.
