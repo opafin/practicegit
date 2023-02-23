@@ -170,6 +170,7 @@ public class Player : MonoBehaviour
             myRigidbody.velocity = climbingSnap;
         }
     }
+
     void IsRunning()
     {
         if (isGrabbing)

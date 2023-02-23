@@ -313,7 +313,6 @@ namespace PracticeNameSpace
             return numbers[0];
         }
 
-
         public static bool IsValidNumber(int num)
         {
             if (num <= 10 && num >= 1)

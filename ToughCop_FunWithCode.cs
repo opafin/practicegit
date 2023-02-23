@@ -6,7 +6,7 @@ namespace PracticeGit
         It's a demerit point for each 5km\h of speed over the speed limit.
         For 12 or more demerit points, you lose your lisence.
         Did you go fast, or did you go slow? Sometimes it doesnt' really matter.
-        The speed limit is randomly set by the local authorities.*/
+        The speed limit is set randomly by the local authorities.*/
         public static void CaughtInASpeedCamera()
         {
             ToughCop copBob = new ToughCop();

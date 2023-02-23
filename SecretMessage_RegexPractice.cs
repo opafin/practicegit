@@ -9,7 +9,6 @@ public class SecretMessage
         Regex regex = new Regex(decryptorPattern);
         var input = File.ReadAllLines("input2.txt");
 
-
         foreach (var line in input)
         {
             MatchCollection matchCollection = regex.Matches(line);
